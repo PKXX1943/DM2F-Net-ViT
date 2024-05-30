@@ -1,15 +1,6 @@
-# DM2F-Net
+# DM2F-Net-ViT
 
-By Zijun Deng, Lei Zhu, Xiaowei Hu, Chi-Wing Fu, Xuemiao Xu, Qing Zhang, Jing Qin, and Pheng-Ann Heng.
-
-This repo is the implementation of
-"[Deep Multi-Model Fusion for Single-Image Dehazing](https://openaccess.thecvf.com/content_ICCV_2019/papers/Deng_Deep_Multi-Model_Fusion_for_Single-Image_Dehazing_ICCV_2019_paper.pdf)"
-(ICCV 2019), written by Zijun Deng at the South China University of Technology.
-
-## Results
-
-The dehazing results can be found at 
-[Google Drive](https://drive.google.com/drive/folders/1ZVBI_3Y2NthVLeK7ODMIB5vRjmN9payF?usp=sharing).
+By Peng Kaixin 21307140077, Fudan University.
 
 ## Installation & Preparation
 
@@ -42,7 +33,7 @@ Make sure you have `Python>=3.7` installed on your machine.
 
 1. ~~Set the path of pretrained ResNeXt model in resnext/config.py~~
 2. Set the path of datasets in tools/config.py
-3. Run by ```python train.py```
+3. Run by ```python train.py``` and ```python train_ohaze.py```
 
 ~~The pretrained ResNeXt model is ported from the [official](https://github.com/facebookresearch/ResNeXt) torch version,
 using the [convertor](https://github.com/clcarwin/convert_torch_to_pytorch) provided by clcarwin. 
@@ -50,10 +41,12 @@ You can directly [download](https://drive.google.com/open?id=1dnH-IHwmu9xFPlyndq
 
 Use pretrained ResNeXt (resnext101_32x8d) from torchvision.
 
+Use pretrained Vision Transformer (vit_base_patch16_224) from timm.
+
 *Hyper-parameters* of training were set at the top of *train.py*, and you can conveniently
 change them as you need.
 
-Training a model on a single ~~GTX 1080Ti~~ TITAN RTX GPU takes about ~~4~~ 5 hours.
+Training a model on a single ~~GTX 1080Ti~~ L20 GPU takes about ~~4~~ 3 hours.
 
 ## Testing
 
@@ -68,16 +61,3 @@ change them as you need.
 
 DM2F-Net is released under the [MIT license](LICENSE).
 
-## Citation
-
-If you find the paper or the code helpful to your research, please cite the project.
-
-```
-@inproceedings{deng2019deep,
-  title={Deep multi-model fusion for single-image dehazing},
-  author={Deng, Zijun and Zhu, Lei and Hu, Xiaowei and Fu, Chi-Wing and Xu, Xuemiao and Zhang, Qing and Qin, Jing and Heng, Pheng-Ann},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={2453--2462},
-  year={2019}
-}
-```
