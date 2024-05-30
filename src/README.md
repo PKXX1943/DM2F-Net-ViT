@@ -29,6 +29,12 @@ Make sure you have `Python>=3.7` installed on your machine.
 
    * Make a directory `./data` and create a symbolic link for uncompressed data, e.g., `./data/RESIDE`.
 
+## Results
+
+Trained model checkpoints can be found at 
+[BaiduNet Disk](https://pan.baidu.com/s/1ttoku2FQ-3GBfr9iE_GmSg).
+Code: dm2f
+
 ## Training
 
 1. ~~Set the path of pretrained ResNeXt model in resnext/config.py~~
